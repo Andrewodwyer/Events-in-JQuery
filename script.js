@@ -8,7 +8,7 @@ $(document).ready(function() {
         $(".stream1").show(1000);
    });
 // second video, talked about .show() and .hide() this is a speed of how fast or slow to show or hide them.
-   $("#stream1_btn").on( function() {
+    $("#stream1_btn").on( function() {
         $(".stream1").toggle();
         $(".stream1").toggle(1000);
     });
@@ -29,9 +29,16 @@ $(document).ready(function() {
     });
 // make the element viable or invisable depending on the status of the element
 // other functions are fadeIn, fadeOut, fadeToggle
-$("#stream1_btn").on( function() {
-    $(".stream1").fadeTo(1000, 0.5); // two parameters, (1)speed and (2)opacity 
-});
+    $("#stream1_btn").on( function() {
+        $(".stream1").fadeTo(1000, 0.5); // two parameters, (1)speed and (2)opacity 
+    });
+    $("#myBurron").removeClass("blueBox").addClass("border"); // example of chaining events together. first is remove, second is add
+    $("p").css("color", "blue").slideUp(2000).slideDown(2000);
+    $("a").attr("href", "http://www.example.com"); //The .attr() acts both as a getter and as a setter 
+
+// you can chane events together. $('p').css('color', 'blue').dlideUp(2000).slidehow(2000);
+
+
 
    $("#stream2_btn").on("click", function() {
         $(".stream1").removeClass('highlight_stream');
@@ -51,3 +58,5 @@ $("#stream1_btn").on( function() {
 // others are .mouseenter(function(),  .mouseleave(function()
 
 // second video, talked about .show() and .hide() this is a speed of how fast or slow to show or hide them.
+
+// you can chane events together. $('p').css('color', 'blue').dlideUp(2000).slidehow(2000);
